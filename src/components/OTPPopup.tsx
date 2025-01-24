@@ -6,7 +6,7 @@ import { Button } from './ui/button';
 
 import { toast } from "sonner";
 import Spinner from './Spinner';
-import { handleCredentialsSignin } from '@/app/actions/authActions';
+// import { handleCredentialsSignin } from '@/app/actions/authActions';
 import { getSession } from 'next-auth/react';
 
 interface OTPPopupProps {
@@ -56,14 +56,14 @@ const OTPPopup: React.FC<OTPPopupProps> = ({ sendOTP, setResendTimer, isOpen, se
     const handleOTPSubmit = async () => {
         setIsValidating(true); // Start loading state
         try {
-            const result = await handleCredentialsSignin({ mobileNumber: formData, otp });
+            // const result = await handleCredentialsSignin({ mobileNumber: formData, otp });
 
-            if (result?.message) {
-                console.log("Sign-in result:", result.message);
-            } else {
-                const session = await getSession();
-                console.log("Sign-in successful:", session?.user);
-            }
+            // if (result?.message) {
+            //     console.log("Sign-in result:", result.message);
+            // } else {
+            //     const session = await getSession();
+            //     console.log("Sign-in successful:", session?.user);
+            // }
         } catch (error) {
             console.log("An unexpected error occurred. Please try again.");
         } finally {

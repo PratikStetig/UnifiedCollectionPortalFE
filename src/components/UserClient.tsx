@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@/components/ui/dropdown-menu';
 import { useRouter } from 'next/navigation';
-import { handleSignOut } from '@/app/actions/authActions';
+// import { handleSignOut } from '@/app/actions/authActions';
 
 interface UserClientProps {
     session: Session | null;
@@ -17,7 +17,7 @@ const UserClient: React.FC<UserClientProps> = ({ session }) => {
     const router = useRouter();
 
     const onSignOut = async () => {
-        await handleSignOut();
+        // await handleSignOut();
     };
     if (session?.user) {
         return (
